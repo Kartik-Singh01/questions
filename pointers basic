@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int num = 5;
+    int a = num;
+    a++;
+    cout<<num<<endl;
+    cout<<a<<endl;
+    
+    
+    // *p represent value of num     and   p represent vlaue of it's adress
+    int *p = &num;
+    cout<<num<<endl;
+    (*p)++;
+    cout<<num<<endl;
+    
+    //copying a pointer 
+    int *q = p;
+    cout<<p<<  "-"  <<q<<endl;
+    cout<<*p<< "-"  <<*q<<endl;
+
+    return 0;
+}
