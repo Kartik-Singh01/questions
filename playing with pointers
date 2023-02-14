@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int arr[10] = {3, 6, 7};
+    
+    cout<<arr<<"adress"<<endl;
+    cout<<&arr[0]<<"adress"<<endl;
+    cout<<*arr<<"valu at o index"<<endl;
+    cout<<*arr+1<<endl;
+    cout<<*(arr+1)<<endl;
+    
+    /*
+    arr[i] = *(arr+i)
+    
+    i[arr] = *(i+arr)
+    
+    */
+    
+    //chalki++
+
+    return 0;
+}
