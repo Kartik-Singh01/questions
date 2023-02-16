@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int lulu(int n){
+    
+    //base case
+    if(n==0){
+        return 1;
+    }
+    
+    int chotiproblem =  lulu(n-1);
+    int badiproblem = n*chotiproblem;
+    
+    return n*lulu(n-1);
+    
+    //  return badiproblem;
+}
+
+
+int main(){
+    int n;
+    cin>>n;
+    
+    int ans = lulu(n);
+    
+    cout<<ans<<endl;
+}
