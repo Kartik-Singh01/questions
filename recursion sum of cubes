@@ -1,0 +1,12 @@
+class Solution {
+  public:
+    long long sumOfSeries(long long N) {
+        if(N==1)
+            return 1;
+        
+        long long remaing = sumOfSeries(N-1);
+        
+        return N*N*N +remaing;
+        
+    }
+};
