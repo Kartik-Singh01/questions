@@ -1,0 +1,89 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+
+class Stack{
+    //properties
+    public:
+        int *arr;
+        int top;
+        int size;
+        
+    //behaviour
+    Stack(int size){
+        this -> size = size;
+        arr = new int[size];
+        top = -1;
+    }
+    
+    void push(int element){
+        if(size - top > 1){
+            top++;
+            arr[top] = element ;
+        }
+        else{
+            cout<<"stack overflow"<<endl;
+        }
+    }
+    
+    void pop(){
+        if(top >= 0){
+            top--;
+        }
+        else{
+            cout<<"Stack underflow"<<endl;
+        }
+    }
+    
+    int peek(){
+        if(top >= 0)
+            return arr[top];
+        else{
+            cout<<"Stack is Empty"<<endl;
+            return -1;
+        }    
+    }
+    
+    bool isEmpty(){
+        if(top== -1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+};
+
+int main(){
+    
+    Stack sz(5);
+    
+    sz.push(9);
+    sz.push(6);
+    sz.push(4);
+    sz.push(8);
+    sz.push(2);
+    
+    cout<<sz.peek()<<endl;
+    sz.pop();
+    
+    cout<<sz.peek()<<endl;
+    sz.pop();
+    
+    cout << sz.peek() << endl;
+
+    sz.pop();
+
+    cout << sz.peek() << endl;
+
+    if(sz.isEmpty()) {
+        cout << "Stack is Empty mere dost " << endl;
+    }
+    else{
+        cout << "Stack is not Empty mere dost " << endl;
+    }
+
+    
+    
+}
